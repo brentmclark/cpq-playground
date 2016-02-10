@@ -1,22 +1,25 @@
 window.addEventListener('DOMContentLoaded', function() {
 	window.MENU = (function() {
 		var pushRightbutton = document.getElementById('push-right');
+		var flyoutRightbutton = document.getElementById('flyout-right');
 		var pushRightNavButton = document.getElementById('push-right-navigate');
+		var flyoutRightNavButton = document.getElementById('flyout-right-navigate');
 		var closeButton = document.getElementById('close-button');
 		var nav = document.getElementById('nav-right');
 		var main = document.getElementById('main');
 		var transitionEvent = getTransitionEvent();
 
-		pushRightbutton.addEventListener('click', function(e) {
-			nav.classList.add('navRight--wrapper-open');
-			nav.classList.remove('navRight--wrapper-closed');
-			main.classList.add('has-push-right');
-		});
-
 		closeButton.addEventListener('click', function(e) {
 			nav.classList.remove('navRight--wrapper-open');
 			nav.classList.add('navRight--wrapper-closed');
 			main.classList.remove('has-push-right');
+		});
+
+		//Push Nav
+		pushRightbutton.addEventListener('click', function(e) {
+			nav.classList.add('navRight--wrapper-open');
+			nav.classList.remove('navRight--wrapper-closed');
+			main.classList.add('has-push-right');
 		});
 
 		pushRightNavButton.addEventListener('click', function() {
@@ -25,9 +28,19 @@ window.addEventListener('DOMContentLoaded', function() {
 				location.href = '/configurator.html';
 			});		
 		});
-		
 
+		//Flyout Nav
+		flyoutRightbutton.addEventListener('click', function(e) {
+			nav.classList.add('navRight--wrapper-open');
+			nav.classList.remove('navRight--wrapper-closed');
+		});
 
+		flyoutRightNavButton.addEventListener('click', function() {
+			flyoutRightbutton.dispatchEvent(new Event('click'));
+			transitionEvent && nav.addEventListener(transitionEvent, function() {
+				location.href = '/configurator.html';
+			});		
+		});
 	}());
 
 
