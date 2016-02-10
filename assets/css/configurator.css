@@ -1,0 +1,47 @@
+.configurator--wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: #222a2d;
+	color:#FFFFFF;
+}
+
+.configurator--header {
+	background-color:#FF0000;
+	width:100%;
+	color:#000000;
+	height:40px;
+}
+
+.configurator--footer {
+	background-color:#FFFFFF;
+	width:100%;
+	color:#000000;
+	height:40px;
+	position:fixed;
+	bottom:0;
+}
+
+.configurator--body {
+	flex:2 0 0;
+}
+
+#main {
+	transition: transform .5s;
+}
+
+.has-push-right {
+	transform: translateX(-100%);
+}
+
+/* Whole Good Cards */
+.wgCards--binder {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.wgCards--card {
+	width:250px;
+	height:250px;
+	background-color:#CCCCCC;
+	margin:8px;
+}
