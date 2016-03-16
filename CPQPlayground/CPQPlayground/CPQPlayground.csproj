@@ -191,17 +191,67 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ConfiguratorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\css\configurator.css" />
+    <Content Include="assets\css\configurator.css">
+      <DependentUpon>configurator.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\css\configurator.min.css">
+      <DependentUpon>configurator.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\constants.css">
+      <DependentUpon>constants.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\css\constants.min.css">
+      <DependentUpon>constants.css</DependentUpon>
+    </Content>
     <Content Include="assets\css\menu.css" />
+    <Content Include="assets\css\model-page.css">
+      <DependentUpon>model-page.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\css\model-page.min.css">
+      <DependentUpon>model-page.css</DependentUpon>
+    </Content>
+    <Content Include="assets\fonts\UnitedSans.css" />
+    <Content Include="assets\fonts\UnitedSansCdBd.svg" />
+    <Content Include="assets\fonts\UnitedSansCondensed.css" />
+    <Content Include="assets\fonts\UnitedSansRgHv.svg" />
+    <Content Include="assets\img\bases\rzr-4-900-eps.png" />
+    <Content Include="assets\img\bases\rzr-570.png" />
+    <Content Include="assets\img\bases\rzr-900-eps-trail.png" />
+    <Content Include="assets\img\bases\rzr-900-eps-xc-edition.png" />
+    <Content Include="assets\img\bases\rzr-900.png" />
+    <Content Include="assets\img\bases\rzr-s-1000-eps.png" />
+    <Content Include="assets\img\bases\rzr-s-900.png" />
+    <Content Include="assets\img\bases\rzr-xp-1000-eps.png" />
+    <Content Include="assets\img\bases\rzr-xp-4-turbo-eps.png" />
+    <Content Include="assets\img\bases\rzr-xp-4-1000-eps.png" />
+    <Content Include="assets\img\bases\rzr-xp-turbo-eps.png" />
+    <Content Include="assets\img\icons\arrow.png" />
+    <Content Include="assets\img\options\white-lightning.jpg" />
+    <Content Include="assets\img\options\havasu-red-pearl.jpg" />
+    <Content Include="assets\img\options\matte-turbo-silver.jpg" />
+    <Content Include="assets\img\options\pursuit-camo.jpg" />
+    <Content Include="assets\img\options\stealth-black.jpg" />
+    <Content Include="assets\img\options\fox-edition-le.jpg" />
+    <Content Include="assets\img\options\highlifter-edition.jpg" />
+    <Content Include="assets\img\specs\background.jpg" />
+    <Content Include="assets\img\specs\rzr-stats.png" />
+    <Content Include="assets\js\configurator.js" />
     <Content Include="assets\js\menu.js" />
+    <Content Include="configurator-app\app.js" />
+    <Content Include="configurator-app\controllers\controllers.js" />
+    <Content Include="configurator-app\factories\factories.js" />
+    <Content Include="configurator-app\views\category.html" />
+    <Content Include="configurator-app\views\pick-a-model.html" />
+    <Content Include="configurator-app\views\pick-a-base.html" />
+    <Content Include="configurator-app\views\partials\model-picker\header.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -225,7 +275,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="assets\css\configurator.scss" />
+    <Content Include="assets\fonts\UnitedSansCdBd.eot" />
+    <Content Include="assets\fonts\UnitedSansCdBd.ttf" />
+    <Content Include="assets\fonts\UnitedSansCdBd.woff" />
+    <Content Include="assets\fonts\UnitedSansRgHv.eot" />
+    <Content Include="assets\fonts\UnitedSansRgHv.ttf" />
+    <Content Include="assets\fonts\UnitedSansRgHv.woff" />
+    <Content Include="assets\css\constants.scss" />
+    <Content Include="assets\css\model-page.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Project_Readme.html" />
+    <Content Include="Views\ViewParts\Configurator\app.cshtml" />
+    <Content Include="Views\Configurator\index.cshtml" />
+    <Content Include="Views\Home\model-page.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

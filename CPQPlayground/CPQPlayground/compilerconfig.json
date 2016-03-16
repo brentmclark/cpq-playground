@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "assets/css/configurator.css",
+    "inputFile": "assets/css/configurator.scss"
+  },
+  {
+    "outputFile": "assets/css/constants.css",
+    "inputFile": "assets/css/constants.scss"
+  },
+  {
+    "outputFile": "assets/css/model-page.css",
+    "inputFile": "assets/css/model-page.scss"
+  }
+]

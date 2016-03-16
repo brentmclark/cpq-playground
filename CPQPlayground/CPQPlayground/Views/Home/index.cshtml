@@ -1,59 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="/assets/css/menu.css">
-		<link rel="stylesheet" type="text/css" href="/assets/css/configurator.css">
-	</head>
-	<body>
-		<section id="main">
-			<h3>Push menu options</h3>
-			<button id="push-right">Push Right</button>
-			<button id="push-right-navigate">Push Right &amp; Navigate</button>
-			<h3>Flyout menu options</h3>
-			<button id="flyout-right">Flyout Right</button>
-			<button id="flyout-right-navigate">Flyout Right &amp; Navigate</button>
-		</section>
-		<nav id="nav-right" class="navRight--wrapper navRight--wrapper-closed">
-			<section class="configurator--wrapper">
-				<header class="configurator--header">
-					<div id="close-button">[X] Close </div>
-				</header>
-				<div class="configurator--body">
-					<div class="wgCards--container">
-						<h3 class="wgCards--title">Section 1<h3>
-						<p class="wgCards--description">Stuff about things and stuff, and sometimes things</p>
-						<div class="wgCards--binder">
-							<div class="wgCards--card">Base Vehicle 1</div>
-							<div class="wgCards--card">Base Vehicle 2</div>
-							<div class="wgCards--card">Base Vehicle 3</div>
-							<div class="wgCards--card">Base Vehicle 4</div>
-						</div>
-					</div>
-					<div class="wgCards--container">
-						<h3 class="wgCards--title">Section 2<h3>
-						<p class="wgCards--description">Stuff about things and stuff, and sometimes things</p>
-						<div class="wgCards--binder">
-							<div class="wgCards--card">Base Vehicle 5</div>
-							<div class="wgCards--card">Base Vehicle 6</div>
-							<div class="wgCards--card">Base Vehicle 7</div>
-						</div>
-					</div>
-					<div class="wgCards--container">
-						<h3 class="wgCards--title">Section 3<h3>
-						<p class="wgCards--description">Stuff about things and stuff, and sometimes things</p>
-						<div class="wgCards--binder">
-							<div class="wgCards--card">Base Vehicle 8</div>
-							<div class="wgCards--card">Base Vehicle 9</div>
-							<div class="wgCards--card">Base Vehicle 10</div>
-							<div class="wgCards--card">Base Vehicle 11</div>
-							<div class="wgCards--card">Base Vehicle 12</div>
-						</div>
-					</div>
-				</div>
-				<footer class="configurator--footer">stuff down here too!</footer>
-			</section>
-		</nav>
-		<script type="text/javascript" src="/assets/js/menu.js"></script>
-	</body>
-</html>
+@section scripts {
+    <script type="text/javascript" src="/assets/js/menu.js"></script>    
+}
+
+<section id="main">
+	<h3>Push menu options</h3>
+	<button id="push-right">Push Right</button>
+	<button id="push-right-navigate">Push Right &amp; Navigate</button>
+	<h3>Flyout menu options</h3>
+	<button id="flyout-right">Flyout Right</button>
+	<button id="flyout-right-navigate">Flyout Right &amp; Navigate</button>
+</section>

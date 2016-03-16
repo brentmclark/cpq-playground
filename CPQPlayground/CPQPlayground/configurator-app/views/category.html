@@ -1,0 +1,9 @@
+﻿<a href="#/" class="btn btn-primary"><< Go Back</a>
+<h3>{{categoryId}}</h3>   
+<div class="category-products">
+    <div class="product pull-left" ng-repeat="product in products | filter:{categories:categoryId}">
+        <div class="btn btn-danger accessoryButton" data-accessory="{{product.name}}" data-layer="{{product.layer}}" data-color="{{product.color}}">
+            <img class="img-responsive" src="/images/{{product.img}}" />
+        </div>
+    </div>
+</div>

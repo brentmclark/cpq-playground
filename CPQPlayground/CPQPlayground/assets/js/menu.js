@@ -9,10 +9,13 @@ window.addEventListener('DOMContentLoaded', function() {
 		var main = document.getElementById('main');
 		var transitionEvent = getTransitionEvent();
 
-		closeButton.addEventListener('click', function(e) {
-			nav.classList.remove('navRight--wrapper-open');
-			nav.classList.add('navRight--wrapper-closed');
-			main.classList.remove('has-push-right');
+		nav.addEventListener('click', function (e) {
+		    if (e.target.id === 'close-button')
+		    {
+		        nav.classList.remove('navRight--wrapper-open');
+		        nav.classList.add('navRight--wrapper-closed');
+		        main.classList.remove('has-push-right');
+		    }
 		});
 
 		//Push Nav
@@ -25,7 +28,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		pushRightNavButton.addEventListener('click', function() {
 			pushRightbutton.dispatchEvent(new Event('click'));
 			transitionEvent && nav.addEventListener(transitionEvent, function() {
-				location.href = '/configurator.html';
+				location.href = '/configurator';
 			});		
 		});
 
@@ -38,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		flyoutRightNavButton.addEventListener('click', function() {
 			flyoutRightbutton.dispatchEvent(new Event('click'));
 			transitionEvent && nav.addEventListener(transitionEvent, function() {
-				location.href = '/configurator.html';
+				location.href = '/configurator';
 			});		
 		});
 	}());

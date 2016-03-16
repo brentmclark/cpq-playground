@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CPQ Playground</title>
+
+    <base href="/configurator/" />
+    <link rel="stylesheet" href="/assets/fonts/UnitedSans.css" />
+    <link rel="stylesheet" href="/assets/fonts/UnitedSansCondensed.css" />
+
+    @*Styles*@
+    <link rel="stylesheet" type="text/css" href="/assets/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/configurator.css">
+</head>
+<body>
+    @*Body*@
+
+    @*Configurator*@
+    @Html.Partial("~/Views/ViewParts/Configurator/app.cshtml")
+
+    @*Scripts*@
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="~/configurator-app/app.js"></script>
+    <script src="~/configurator-app/factories/factories.js"></script>
+    <script src="~/configurator-app/controllers/controllers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="~/assets/js/configurator.js"></script>
+</body>
+</html>

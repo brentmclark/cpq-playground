@@ -1,0 +1,36 @@
+﻿<div ng-include="'/configurator-app/views/partials/model-picker/header.html'"></div>
+<div class="wgCards__container" ng-class="$first ? ' wgCards__container--open' : ''" ng-repeat="category in categories">
+    <div class="wgCards__binder">
+        <div class="wgCards__titleArea">
+            <h3 class="wgCards__title">{{category.name}}</h3>
+            <p class="wgCards__description">{{category.tagline}}</>p
+        </div>
+        <div class="wgCards__optionsArea">
+            <div class="wgCards__optionsWrap">
+                <div>{{category.vehicles.length}} color{{category.vehicles.length === 1 ? '' : 's'}} starting at</div>
+                <div class="wgCards__price--lowest">{{category.vehicles[0].price}}</div>
+            </div>
+            <button class="wgCards__buttons--pageToggle">Pick Your Model<span class="wgCards__arrow"></span></button>
+        </div>
+    </div>
+    <div class="wgCards__page">
+        <div class="wgCards__card" ng-repeat="vehicle in category.vehicles">
+            <img ng-src="/assets/img/bases/{{vehicle.imageName}}" />
+            <div class="wgCards__body">
+                <div class="wgCards__colorSwatch" style="background-color:#{{vehicle.color}};"></div>
+                <div class="wgCards__name">{{vehicle.name}}</div>
+                <div class="wgCards__priceWrap">
+                    <span class="wgCards__MSRP">Starting US MSRP</span>
+                    <span class="wgCards__price--vehicle">{{vehicle.price}}</span>
+                </div>
+                <ul class="wgCards__features">
+                    <li ng-repeat="feature in vehicle.features">{{feature}}</li>
+                </ul>
+            </div>
+            <div class="wgCards__buttons">
+                <a href="/configurator/{{vehicle.baseSlug}}" class="wgCards__buttons--primary">Build</a>
+                <a href="#" class="wgCards__buttons--light">Explore this model</a>
+            </div>
+        </div>
+    </div>
+</div>

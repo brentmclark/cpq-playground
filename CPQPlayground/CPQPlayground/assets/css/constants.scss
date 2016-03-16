@@ -1,0 +1,51 @@
+﻿@mixin font-primary() {
+    font-family: 'United Sans', Helvetica, serif;
+    text-transform: uppercase;
+}
+
+@mixin font-secondary() {
+    font-family: 'United Sans Condensed', Helvetica, serif;
+    text-transform: uppercase;
+}
+
+@mixin buttons-core() {
+    @include font-primary();
+    border: 0;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 22px;
+    vertical-align: -webkit-baseline-middle;
+    cursor: pointer;
+}
+
+$colorPrimary: #D0021B;
+$colorDark: #444;
+$colorLight: #FFF;
+
+/*
+    Reset
+    ===================================
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-sizing:border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include font-secondary;
+}
+
+* {
+    margin: 0;
+}
+
+button {
+    @include buttons-core;
+}
