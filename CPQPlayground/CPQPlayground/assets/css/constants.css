@@ -27,5 +27,6 @@ button {
   text-align: center;
   padding: 14px 22px;
   vertical-align: -webkit-baseline-middle;
-  cursor: pointer; }
+  cursor: pointer;
+  background: url("/assets/img/icons/button-background.2x.png") top center; }
 

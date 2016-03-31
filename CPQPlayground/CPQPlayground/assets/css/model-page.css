@@ -27,7 +27,8 @@ button {
   text-align: center;
   padding: 14px 22px;
   vertical-align: -webkit-baseline-middle;
-  cursor: pointer; }
+  cursor: pointer;
+  background: url("/assets/img/icons/button-background.2x.png") top center; }
 
 body {
   padding: 0 10px; }
@@ -91,6 +92,7 @@ body {
   padding: 14px 22px;
   vertical-align: -webkit-baseline-middle;
   cursor: pointer;
+  background: url("/assets/img/icons/button-background.2x.png") top center;
   background-color: #D0021B;
   display: block;
   margin: 0 0 8px; }
@@ -107,6 +109,7 @@ body {
   padding: 14px 22px;
   vertical-align: -webkit-baseline-middle;
   cursor: pointer;
+  background: url("/assets/img/icons/button-background.2x.png") top center;
   background-color: #444;
   display: block; }
 
@@ -157,5 +160,7 @@ body {
   .specs__footer {
     display: flex; }
   .specs__button--primary-cta {
-    margin: 0; } }
+    margin: 0; }
+  .specs__product-image {
+    width: auto; } }
 
